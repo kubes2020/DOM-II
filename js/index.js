@@ -53,14 +53,19 @@ window.addEventListener('scroll', (event) => {
     console.log('scroll')
 })
 
-const navTop = document.querySelector('.nav-container');
-const logo = document.querySelector('.logo-heading');
-navTop.addEventListener('click', (event) => {
-    event.target.style.background = 'purple';
-    logo.addEventListener('click', (event) => {
-        event.stopPropagation()
-    })
+const bodyP = document.querySelector('body');
 
+bodyP.addEventListener('click', (event) => {
+    bodyP.style.background = 'purple';
+});
+
+
+const navTop = document.querySelector('.nav-container');
+
+navTop.addEventListener('click', (event) => {
+    navTop.style.background = 'purple';
+    event.stopPropagation()
 })
 
+event.target.style.background = 'purple';
 
