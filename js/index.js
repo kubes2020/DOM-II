@@ -67,5 +67,20 @@ navTop.addEventListener('click', (event) => {
     event.stopPropagation()
 })
 
-event.target.style.background = 'purple';
 
+
+//   this one uses 'event' and is specific, no bubbles
+
+const theNavA = document.querySelectorAll('.nav a');
+// theNavA.forEach((item) => {
+//     item.addEventListener('mouseover', (event) => {
+//         event.target.style.background = 'orange';
+//     })
+// })
+
+//   this one uses anonymous arrow func, with 'item' as element to style 
+theNavA.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+        item.style.background = 'orange';
+    })
+})
